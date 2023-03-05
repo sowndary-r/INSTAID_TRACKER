@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <style>
+        body{
+            margin:0;
+    padding: 0;
+           background: rgb(131,58,180);
+        background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+        }
+        #box{
+            text-align: center;
+   border:3px solid white;
+   padding:1rem;
+   align-items: center;
+   justify-content: center;
+        }
+        input{
+            width:400px;
+            height:40px;
+        }
+        #btn{
+            width:150px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bolder;
+            height:30px;
+            color:white;
+            background: linear-gradient(rgb(223, 46, 75),purple);
+        }
+        .container{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:white;
+    display: flex;
+    width: 100vw;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+        }
+    </style>
+    <div class="container">
+        <div id="box">
+            
+                <input type="text" name="" placeholder="Enter the valid insta ID" id="input"><br>
+            
+ <div>
+    <button id="btn">FIND THE ACCOUNT</button>
+ </div>
+    
+     </div>
+    </div>
+    <script>
+  let insid=document.getElementById("input");
+  
+  if(insid===undefined)alert('enter id');
+  else
+  {
+   
+  const logoutButton = document.getElementById('btn');
+logoutButton.addEventListener('click', function() {
+  //localStorage.clear();
+  let iid=insid.value;
+  let lk="https://instagram.com/"+iid+"?igshid=NTE5MzUyOTU=";
+    console.log(lk);
+  window.location.href = lk;
+});
+  }
+  
+    </script>
+</body>
+</html>
